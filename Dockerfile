@@ -9,13 +9,11 @@ LABEL "repository"="https://github.com/NiklasMerz/github-deployment-action"
 LABEL "maintainer"="Niklas Merz"
 
 
-WORKDIR /usr/src/app
-
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+COPY deployment.js /usr/bin/deployment.js
 
-COPY "entrypoint.sh" "/entrypoint.sh"
+COPY "entrypoint.sh" "/usr/bin/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
 CMD [""]
