@@ -1,5 +1,8 @@
 Create Github deployments in you actions like that:
 
+First create a deployment and with flag `-f`  create the success status:
+
+````
 action "create deployment" {
   uses = "niklasmerz/github-deployment-action@master"
   secrets = ["GITHUB_TOKEN"]
@@ -12,3 +15,4 @@ action "set deployment status" {
   args = "-o niklasmerz -r myrepo -s success -u https://url.com -f"
   secrets = ["GITHUB_TOKEN"]
 }
+````
