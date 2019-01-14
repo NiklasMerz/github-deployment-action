@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10-slim
 
 LABEL "com.github.actions.name"="Github Deployment"
 LABEL "com.github.actions.description"="Create a Github deployment and set a status"
@@ -15,3 +15,4 @@ COPY . .
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
+CMD [""]
