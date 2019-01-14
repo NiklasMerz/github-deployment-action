@@ -1,0 +1,28 @@
+{
+  "name": "github-deployment-action",
+  "version": "1.0.0",
+  "description": "Create Github deployments with actions in your workflow",
+  "main": "deployment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/niklasmerz/github-deployment-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "deployment"
+  ],
+  "author": "Niklas Merz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niklasmerz/github-deployment-action/issues"
+  },
+  "homepage": "https://github.com/niklasmerz/github-deployment-action#readme",
+  "dependencies": {
+    "@octokit/rest": "^16.8.1",
+    "command-line-args": "^5.0.2"
+  }
+}
