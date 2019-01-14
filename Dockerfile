@@ -5,6 +5,9 @@ LABEL "com.github.actions.description"="Create a Github deployment and set a sta
 LABEL "com.github.actions.icon"="moon"
 LABEL "com.github.actions.color"="green"
 
+LABEL "repository"="https://github.com/NiklasMerz/github-deployment-action"
+LABEL "maintainer"="Niklas Merz"
+
 
 WORKDIR /usr/src/app
 
