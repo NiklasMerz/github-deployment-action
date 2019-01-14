@@ -1,4 +1,5 @@
 #!/bin/sh
 set -e
 
-node ./deployment.js $*
+
+sh -c "deployment.js $*"
