@@ -13,4 +13,5 @@ RUN npm install
 
 COPY . .
 
-CMD ["node", "deployment.js"]
+COPY "entrypoint.sh" "/entrypoint.sh"
+ENTRYPOINT ["/entrypoint.sh"]
