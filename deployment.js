@@ -5,6 +5,7 @@ const commandLineArgs = require('command-line-args')
 
 async function createDeployment(options) {
     options.task = 'deploy';
+    options.required_contexts = [];
     let result = await octokit.repos.createDeployment(options)
     const id = result.data.id;
     console.log(id);
