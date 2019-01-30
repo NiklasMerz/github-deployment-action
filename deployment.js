@@ -14,6 +14,7 @@ async function createDeployment(options) {
     console.log(result.status == 201 ? 'Done': 'Error');
     if(result.status != 201) {
         console.error(result);
+        process.exit(1);
     }
 }
 
@@ -28,9 +29,11 @@ async function createDeploymentStatus(options) {
         console.log(result.status == 201 ? 'Done' : 'Error');
         if (result.status != 201) {
             console.error(result);
+            process.exit(1);
         }
     } catch(e) {
         console.error(e);
+        process.exit(1);
     }
 }
 
