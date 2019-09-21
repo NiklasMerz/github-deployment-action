@@ -4,7 +4,7 @@
 
 This actions allows you to create a deployment and set a deployment status.
 
-For options please see `deployment.js` and the [Github documentation].(https://developer.github.com/v3/repos/deployments/)
+For options please see `deployment.js` and the [Github documentation](https://developer.github.com/v3/repos/deployments/)
 
 First create a deployment and with flag `-f`  create the success status:
 ````
