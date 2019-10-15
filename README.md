@@ -8,16 +8,18 @@ For options please see `deployment.js` and the [Github documentation](https://de
 
 First create a deployment and with flag `-f`  create the success status:
 ````
-action "create deployment" {
-  uses = "niklasmerz/github-deployment-action@master"
-  secrets = ["GITHUB_TOKEN"]
-  args = "-o niklasmerz -r myrepo -c master"
-}
-
-action "set deployment status" {
-  uses = "niklasmerz/github-deployment-action@master"
-  needs = ["create deployment"]
-  args = "-o niklasmerz -r myrepo -s success -u https://url.com -f"
-  secrets = ["GITHUB_TOKEN"]
-}
+- name: create deployment
+    uses: niklasmerz/github-deployment-action@master
+    if: contains(github.ref, 'master')
+    env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    with:
+    args: -o niklasmerz -r myrepo -c master -e production
+- name: set deployment status
+    uses: niklasmerz/github-deployment-action@master
+    if: contains(github.ref, 'master')
+    env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    with:
+    args: -o niklasmerz -r myrepo -s success -u https://url.com -f
 ````
