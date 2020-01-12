@@ -9,17 +9,17 @@ For options please see `deployment.js` and the [Github documentation](https://de
 First create a deployment and with flag `-f`  create the success status:
 ````
 - name: create deployment
-    uses: niklasmerz/github-deployment-action@master
-    if: contains(github.ref, 'master')
-    env:
+  uses: niklasmerz/github-deployment-action@master
+  if: contains(github.ref, 'master')
+  env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
+  with:
     args: -o niklasmerz -r myrepo -c master -e production
 - name: set deployment status
-    uses: niklasmerz/github-deployment-action@master
-    if: contains(github.ref, 'master')
-    env:
+  uses: niklasmerz/github-deployment-action@master
+  if: contains(github.ref, 'master')
+  env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
+  with:
     args: -o niklasmerz -r myrepo -s success -u https://url.com -f
 ````
