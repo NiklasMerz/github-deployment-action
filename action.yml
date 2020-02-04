@@ -1,0 +1,7 @@
+name: 'github-deployment-action'
+description: 'Create deployments on Github'
+author: 'Niklas Merz'
+branding:
+    icon: 'moon'  
+    color: 'green'
+image: 'Dockerfile'
