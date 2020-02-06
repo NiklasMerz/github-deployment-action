@@ -4,4 +4,6 @@ author: 'Niklas Merz'
 branding:
     icon: 'moon'  
     color: 'green'
-image: 'Dockerfile'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
