@@ -1,9 +1,13 @@
 name: 'github-deployment-action'
-description: 'Create deployments on Github'
+description: 'Create deployments on GitHub'
 author: 'Niklas Merz'
 branding:
     icon: 'moon'  
     color: 'green'
+inputs:
+  owner:
+    description: Helm release name. Will be combined with track if set. (required)
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
