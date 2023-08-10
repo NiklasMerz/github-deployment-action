@@ -63,6 +63,7 @@ const optionDefinitions = [
     { name: 'environment', alias: 'e', type: String },
     { name: 'environment_url', alias: 'u', type: String },
     { name: 'auto_inactive', type: Boolean },
+    { name: 'auto_merge', type: Boolean, defaultValue: false },
 ]
 const options = commandLineArgs(optionDefinitions)
 
