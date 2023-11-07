@@ -9,7 +9,7 @@ For options please see `deployment.js` and the [Github documentation](https://de
 First create a deployment and with flag `-f`  create the success status:
 ````
 - name: create deployment
-  uses: niklasmerz/github-deployment-action@master
+  uses: docker://ghcr.io/niklasmerz/github-deployment-action/deployment-action:latest
   if: contains(github.ref, 'master')
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -23,3 +23,5 @@ First create a deployment and with flag `-f`  create the success status:
   with:
     args: -o niklasmerz -r myrepo -s success -u https://url.com -f
 ````
+
+>Note see example above: you can either use the repository name or Docker image: `docker://ghcr.io/niklasmerz/github-deployment-action/deployment-action:latest`. Using the Docker image should be a bit faster the image does not need to be built on every run.
