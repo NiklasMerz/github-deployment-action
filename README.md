@@ -1,4 +1,4 @@
-# Create Github deployments in you actions
+# Create GitHub deployments in you actions
 
 > If you have any questions please ping me. This action basically works but has not all features I want it to.
 
