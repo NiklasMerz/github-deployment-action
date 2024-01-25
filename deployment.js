@@ -13,7 +13,7 @@ async function createDeployment(options) {
     let result = await octokit.rest.repos.createDeployment(options)
     const id = result.data.id;
     console.log(id);
-    fs.writeFileSync(process.env.HOME + '/deployment_action', number.toString(id));
+    fs.writeFileSync(process.env.HOME + '/deployment_action', id.toString());
     
     console.log(result.status == 201 ? 'Done': 'Error');
     if(result.status != 201) {
