@@ -66,5 +66,7 @@ const optionDefinitions = [
 ]
 const options = commandLineArgs(optionDefinitions)
 
+console.log('Run', options);
+
 main(options);
 
