@@ -24,7 +24,7 @@ async function createDeployment(options) {
 
 async function createDeploymentStatus(options) {
     const idTxt = fs.readFileSync(process.env.HOME + '/deployment_action', 'utf8');
-    options.deployment_id = parseInt(idTxt);
+    options.deployment_id = idTxt;
     delete options.setstatus;
     delete options.ref;
 
