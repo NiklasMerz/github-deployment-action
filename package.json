@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/niklasmerz/github-deployment-action#readme",
   "dependencies": {
-    "@octokit/rest": "^16.8.1",
+    "@octokit/rest": "^20.0.2",
     "command-line-args": "^5.0.2"
   }
 }
