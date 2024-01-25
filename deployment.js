@@ -8,7 +8,6 @@ const octokit = new Octokit({
 });
 
 async function createDeployment(options) {
-    console.log('Create deployment', options);
     options.task = 'deploy';
     options.required_contexts = [];
     let result = await octokit.repos.createDeployment(options)
@@ -69,5 +68,5 @@ const options = commandLineArgs(optionDefinitions)
 
 console.log('Run', options);
 
-main({...options});
+main(options);
 
