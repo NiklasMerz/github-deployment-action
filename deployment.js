@@ -1,6 +1,7 @@
 
 const fs = require('fs');
-const octokit = require('@octokit/rest')()
+const { Octokit } = require('@octokit/rest');
+const octokit = new Octokit();
 const commandLineArgs = require('command-line-args')
 
 async function createDeployment(options) {
