@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:lts-alpine
 
 LABEL "com.github.actions.name"="Github Deployment"
 LABEL "com.github.actions.description"="Create a Github deployment and set a status"

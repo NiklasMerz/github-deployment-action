@@ -10,7 +10,7 @@ const octokit = new Octokit({
 async function createDeployment(options) {
     options.task = 'deploy';
     options.required_contexts = [];
-    let result = await octokit.repos.createDeployment(options)
+    let result = await octokit.rest.repos.createDeployment(options)
     const id = result.data.id;
     console.log(id);
     fs.writeFileSync(process.env.HOME + '/deployment_action', id);
@@ -29,7 +29,7 @@ async function createDeploymentStatus(options) {
     delete options.ref;
 
     try {
-        result = await octokit.repos.createDeploymentStatus(options)
+        result = await octokit.rest.repos.createDeploymentStatus(options)
         console.log(result.status == 201 ? 'Done' : 'Error');
         if (result.status != 201) {
             console.error(result);
