@@ -1,8 +1,11 @@
 
 const fs = require('fs');
 const { Octokit } = require('@octokit/rest');
-const octokit = new Octokit();
 const commandLineArgs = require('command-line-args')
+
+const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN,
+});
 
 async function createDeployment(options) {
     options.task = 'deploy';
@@ -39,11 +42,6 @@ async function createDeploymentStatus(options) {
 }
 
 function main(options) {
-    octokit.authenticate({
-        type: 'token',
-        token: process.env.GITHUB_TOKEN
-    })
-
     if(options.setstatus) {
         createDeploymentStatus(options);
     } else {
