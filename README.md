@@ -1,6 +1,7 @@
 # Create GitHub deployments in you actions
 
-> If you have any questions please ping me. This action basically works but has not all features I want it to.
+> ![NOTE]
+> GitHub Actions now support deplyoments very well integrated
 
 This actions allows you to create a deployment and set a deployment status.
 
